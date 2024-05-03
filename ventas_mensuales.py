@@ -27,9 +27,13 @@ ventas_mensuales = [
 {"mes": "Noviembre 2", "total_ventas": 55000, "año": 2024},
 {"mes": "Diciembre 2", "total_ventas": 58000, "año": 2024},
 ]
-
+#Se crea un DataFram con las ventas mesuales
 df = pd.DataFrame(ventas_mensuales)
 
+#Promedio de ventas
+print(df["total_ventas"].mean())
 
+
+#Creamos el graficos con el valor X con los meses y el valor Y con el total  de las ventas
 pyplot.plot(df["mes"], df["total_ventas"])
 pyplot.show()
